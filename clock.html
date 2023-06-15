@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/css/reset.css">
+    <link rel="stylesheet" href="./resources/css/styles.css">
+    <link rel="stylesheet" href="./resources/css/projects.css">
+    <link rel="stylesheet" href="./resources/css/clock.css">
+    <link rel="shortcut icon" href="./resources/pictures/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+    <title>skh portfolio website</title>
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <a href="./index.html" class="logo">
+                <p>FND</p>
+                <img src="./resources/pictures/coding.png" alt="">
+                <p>MONKEY</p>
+            </a>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="./projects.html">Projects</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="social">
+                <ul>
+                    <li><a href=""><img src="./resources/pictures/email.png" alt="" id="email"></a></li>
+                    <li><a href=""><img src="./resources/pictures/tg.png" alt="" id="tg"></a></li>
+                    <li><a href=""><img src="./resources/pictures/fb.png" alt="" id="fb"></a></li>
+                    <li><a href=""><img src="./resources/pictures/github.png" alt="" id="github"></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="projects">
+            <div class="project">
+                <h1>What time is it?</h1>
+                <p class="clock" id="clock"></p>
+
+                <div class="timebox">
+                    <p class="inpt">Set wakeup time</p>
+                        <select class="timeselect" name="" id="wakeup">
+                            <option value="1">00-06</option>
+                            <option value="2">06-12</option>
+                            <option value="3">12-18</option>
+                            <option value="4">18-24</option>
+                            <option value="5" selected>Choose</option>
+                        </select>
+                </div>
+                <div class="timebox">
+                    <p class="inpt">Set zvir time</p>
+                        <select class="timeselect" name="" id="zvir">
+                            <option value="1">00-06</option>
+                            <option value="2">06-12</option>
+                            <option value="3">12-18</option>
+                            <option value="4">18-24</option>
+                            <option value="5" selected>Choose</option>
+                        </select>
+                </div>
+                <div class="timebox">
+                    <p class="inpt">Set sleep time</p>
+                        <select class="timeselect" name="" id="sleep">
+                            <option value="1">00-06</option>
+                            <option value="2">06-12</option>
+                            <option value="3">12-18</option>
+                            <option value="4">18-24</option>
+                            <option value="5" selected>Choose</option>
+                        </select>
+                </div>
+                <img src="./resources/pictures/projects/clock/cat.png" alt="" id="catPic">
+                <button class="button-68" id="checkButton">Party time</button>
+            </div>
+
+            <div class="project" id="analog">
+                <h1>Analog world clock</h1>
+
+                <div class="timebox">
+                <p class="inpt">Select city</p>
+                        <select class="timeselect" name="" id="clockselect">
+                            <option value="kyiv" selected>KYIV</option>
+                            <option value="newyork">NEWYORK</option>
+                            <option value="london">LONDON</option>
+                            <option value="paris">PARIS</option>
+                </select> <br>
+                </div>
+
+                <div class="analog-box">
+                    <div id="hour"></div>
+                    <div id="minute"></div>
+                    <div id="second"></div>
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class="footer">
+            <p>copyright 2023</p> 
+        </div>
+
+    </div>
+
+</body>
+<script src="./resources/js/js.js"></script>
+<script src="./resources/js/clock.js"></script>
+<script src="./resources/js/analog.js"></script>
+</html>
