@@ -13,14 +13,13 @@ function updateClock () {
 }
 setInterval(updateClock, 1000);
 
-//check selects 
+//check selects need to fix one bug
 document.getElementById('zvir').onchange = function () {
     let wakeUpTime = document.getElementById("wakeup").value;
     let zvirTime =  document.getElementById("zvir").value;
     let sleepTime = document.getElementById("sleep").value;
 
     if (zvirTime == wakeUpTime || zvirTime == sleepTime) {
-        zvirTime =  document.getElementById("zvir").value = 5;
         alert('Please select another time')
     }
 }
@@ -31,7 +30,6 @@ document.getElementById('wakeup').onchange = function () {
     let sleepTime = document.getElementById("sleep").value;
 
     if (zvirTime == wakeUpTime || zvirTime == sleepTime) {
-        wakeUpTime =  document.getElementById("wakeup").value = 5;
         alert('Please select another time')
     }
 }
@@ -42,7 +40,6 @@ document.getElementById('sleep').onchange = function () {
     let sleepTime = document.getElementById("sleep").value;
 
     if (zvirTime == wakeUpTime || zvirTime == sleepTime) {
-        sleepTime =  document.getElementById("sleep").value = 5;
         alert('Please select another time')
     }
     
@@ -66,14 +63,17 @@ function updateCatStatus () {
             if (wakeUpTime == 1) {document.getElementById("catPic").src = wakeUpPic};
             if (zvirTime == 1) {document.getElementById("catPic").src = zvirPic;}
             if (sleepTime == 1) {document.getElementById("catPic").src = sleepPic};
+        break;
         case (hoursNow > 6 && hoursNow < 12):
             if (wakeUpTime == 2) {document.getElementById("catPic").src = wakeUpPic};
             if (zvirTime == 2) {document.getElementById("catPic").src = zvirPic;};
             if (sleepTime == 2) {document.getElementById("catPic").src = sleepPic};
+        break;
         case (hoursNow > 12 && hoursNow < 18):
             if (wakeUpTime == 3) {document.getElementById("catPic").src = wakeUpPic};
             if (zvirTime == 3) {document.getElementById("catPic").src = zvirPic;};
             if (sleepTime == 3) {document.getElementById("catPic").src = sleepPic};
+        break;
         case (hoursNow >18 && hoursNow < 24):
             if (wakeUpTime == 4) {document.getElementById("catPic").src = wakeUpPic};
             if (zvirTime == 4) {document.getElementById("catPic").src = zvirPic;};
