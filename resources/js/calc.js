@@ -1,5 +1,9 @@
 document.getElementById('calc-display').innerHTML = 'FNDMNK Calculator';
 let forDisplay = "";
+let a = 0;
+let b = 0;
+let sum = 0;
+let diya = '';
 const refresh = () => {document.getElementById('calc-display').innerHTML = forDisplay;}
 
 document.getElementById('ac').onclick = function () {
@@ -8,19 +12,43 @@ document.getElementById('ac').onclick = function () {
     }
     
 document.getElementById('sign').onclick = function () {
-
+        if (+forDisplay < 0) {
+            forDisplay = forDisplay.replace('-', '');
+            refresh();
+        } else {
+            forDisplay = `-${forDisplay}`;
+            refresh();
+        }
     };
-document.getElementById('perc').onclick = function () { 
+document.getElementById('perc').onclick = function () {
+        a = forDisplay;
+        forDisplay = "";
+        refresh(); 
     };
-document.getElementById('del').onclick = function () { 
+document.getElementById('del').onclick = function () {
+        a = forDisplay;
+        forDisplay = "";
+        refresh(); 
     };
-document.getElementById('mult').onclick = function () { 
+document.getElementById('mult').onclick = function () {
+        a = forDisplay;
+        forDisplay = "";
+        refresh(); 
     };
-document.getElementById('plus').onclick = function () { 
+document.getElementById('plus').onclick = function () {
+        a = forDisplay;
+        forDisplay = "";
+        refresh(); 
     };
 document.getElementById('min').onclick = function () { 
+        a = forDisplay;
+        forDisplay = "";
+        refresh();
     };
-document.getElementById('rovno').onclick = function () { 
+document.getElementById('rovno').onclick = function () {
+        b = forDisplay;
+        refresh();
+
     };
 document.getElementById('com').onclick = function () {
     if (forDisplay.indexOf(',') == -1) {
@@ -71,4 +99,5 @@ document.getElementById('zero').onclick = function () {
         refresh(); 
     }
     };
+
 
