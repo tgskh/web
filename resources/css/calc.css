@@ -1,4 +1,20 @@
 /* Calculator styles */
+.calc-container {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 76vh;
+}
+
+.project-calc {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
 .calc-btn {
   background: #fff;
   backface-visibility: hidden;
@@ -70,8 +86,8 @@
 }
 .grid-calc {
     display: grid;
-    grid-template-rows: 1fr repeat(5, 1fr);
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2fr repeat(5, 2fr);
+    grid-template-columns: repeat(4, 2fr);
     grid-template-areas:
         "d d d d"
         "ac sign perc del"
@@ -85,78 +101,6 @@
 
 #zero {
     grid-area: zer;
-}
-
-#com {
-    grid-area: com;
-}
-
-#rovno {
-    grid-area: rovno;
-}
-
-#one {
-    grid-area: one;
-}
-
-#two {
-    grid-area: two;
-}
-
-#three {
-    grid-area: three;
-}
-
-#plus {
-    grid-area: plus;
-}
-
-#four {
-    grid-area: four;
-}
-
-#five {
-    grid-area: five;
-}
-
-#six {
-    grid-area: six;
-}
-
-#min {
-    grid-area: min;
-}
-
-#ac {
-    grid-area: ac;
-}
-
-#sign {
-    grid-area: sign;
-}
-
-#perc {
-    grid-area: perc;
-}
-
-#del {
-    grid-area: del;
-}
-
-#seven {
-    grid-area: seven;
-}
-
-#eight {
-    grid-area: eight;
-}
-
-#nine {
-    grid-area: nine;
-}
-
-#mult {
-    grid-area: mult;
 }
 
 .calc-display {

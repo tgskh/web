@@ -1,103 +1,72 @@
-document.getElementById('calc-display').innerHTML = 'FNDMNK Calculator';
-let forDisplay = "";
-let a = 0;
-let b = 0;
-let sum = 0;
-let diya = '';
-const refresh = () => {document.getElementById('calc-display').innerHTML = forDisplay;}
+let calcScreen = document.getElementById('calc-display');
+let firstInput, nextInput, result, operation;
 
-document.getElementById('ac').onclick = function () {
-    document.getElementById('calc-display').innerHTML = '0';
-    forDisplay = "";
-    }
-    
-document.getElementById('sign').onclick = function () {
-        if (+forDisplay < 0) {
-            forDisplay = forDisplay.replace('-', '');
-            refresh();
-        } else {
-            forDisplay = `-${forDisplay}`;
-            refresh();
-        }
-    };
-document.getElementById('perc').onclick = function () {
-        a = forDisplay;
-        forDisplay = "";
-        refresh(); 
-    };
-document.getElementById('del').onclick = function () {
-        a = forDisplay;
-        forDisplay = "";
-        refresh(); 
-    };
-document.getElementById('mult').onclick = function () {
-        a = forDisplay;
-        forDisplay = "";
-        refresh(); 
-    };
-document.getElementById('plus').onclick = function () {
-        a = forDisplay;
-        forDisplay = "";
-        refresh(); 
-    };
-document.getElementById('min').onclick = function () { 
-        a = forDisplay;
-        forDisplay = "";
-        refresh();
-    };
-document.getElementById('rovno').onclick = function () {
-        b = forDisplay;
-        refresh();
+const numberButton = document.querySelectorAll('[data-number]');
+const operationButton = document.querySelectorAll('[data-operation]');
+const clearButton = document.querySelectorAll('[data-clear]');
 
-    };
-document.getElementById('com').onclick = function () {
-    if (forDisplay.indexOf(',') == -1) {
-        forDisplay = `${forDisplay},`;
-        refresh();
-    }
-};
+numberButton.forEach(button => {
+    button.addEventListener('click', () => {
+        //remove first 0
+        if (calcScreen.innerHTML == 0) {
+            calcScreen.innerHTML = calcScreen.innerHTML.replace('0','')
+        };
+        calcScreen.innerHTML = calcScreen.innerHTML + button.textContent;
+        
+    });
+});
 
-document.getElementById('one').onclick = function () {
-    forDisplay = `${forDisplay}1`;
-    refresh();
-    };
-document.getElementById('two').onclick = function () {
-    forDisplay = `${forDisplay}2`;
-    refresh();
-    };
-document.getElementById('three').onclick = function () {
-    forDisplay = `${forDisplay}3`;
-    refresh();
-    };
-document.getElementById('four').onclick = function () {
-    forDisplay = `${forDisplay}4`;
-    refresh(); 
-    };
-document.getElementById('five').onclick = function () {
-    forDisplay = `${forDisplay}5`;
-    refresh(); 
-    };
-document.getElementById('six').onclick = function () {
-    forDisplay = `${forDisplay}6`;
-    refresh(); 
-    };
-document.getElementById('seven').onclick = function () {
-    forDisplay = `${forDisplay}7`;
-    refresh(); 
-    };
-document.getElementById('eight').onclick = function () {
-    forDisplay = `${forDisplay}8`;
-    refresh(); 
-    };
-document.getElementById('nine').onclick = function () {
-    forDisplay = `${forDisplay}9`;
-    refresh(); 
-    };
-document.getElementById('zero').onclick = function () {
-    if (forDisplay.charAt(0) !== '0') {
-        forDisplay = `${forDisplay}0`;
-        refresh(); 
+document.getElementById('point').addEventListener('click', () => {
+    if (calcScreen.innerHTML.indexOf(',') == -1) {calcScreen.innerHTML = `${calcScreen.innerHTML},` }
+});
+
+document.getElementById('sign').addEventListener('click', () => {
+    if (calcScreen.innerHTML.indexOf('-') == -1) {calcScreen.innerHTML = `-${calcScreen.innerHTML}`}
+    else {calcScreen.innerHTML = calcScreen.innerHTML.replace('-','');}
+});
+
+operationButton.forEach(button => {
+    button.addEventListener('click', () => {
+        firstInput = parseFloat(calcScreen.innerHTML);
+        operation = button.textContent;
+        calcScreen.innerHTML = 0;
+    });
+});
+
+clearButton.forEach(button => {
+    button.addEventListener('click', () => {
+        calcScreen.innerHTML = 0;
+        firstInput = undefined; 
+        nextInput = undefined;
+        result = undefined;
+        operation = undefined;
+    });
+});
+
+document.getElementById('result').addEventListener('click', () => {
+    nextInput = parseFloat(calcScreen.innerHTML);
+    console.log(firstInput);
+    console.log(nextInput);
+    switch (true) {
+        case (operation == '+'):
+            result = firstInput + nextInput;
+            break;
+        case (operation == '-'):
+            result = firstInput - nextInput;
+            break;
+        case (operation == 'x'):
+            result = firstInput * nextInput;
+            break;
+        case (operation == '/'):
+            result = firstInput / nextInput;
+            break;
+        case (operation == '%'):
+            result = firstInput % nextInput;
+            break;
     }
-    };
+    calcScreen.innerHTML = result;
+    firstInput = result;
+})
+
 
 
