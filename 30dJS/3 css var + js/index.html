@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>CSS changer</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Update CSS VAR with <span class="js">JS</span></h2>
+    </div>
+    <div class="buttons">
+      <div class="button">
+        <p>Spasing</p>
+        <input id="space" name="space" type="range" min="1" max="100" value="0" data-size="px">
+      </div>
+      <div class="button">
+        <p>Blur</p>
+        <input id="blur" name="blur" type="range" min="1" max="10" value="0" data-size="px">
+      </div>
+      <div class="button">
+        <p>Base color</p>
+        <input id="color" name="color" type="color" id="head" name="head" value="#C1B100" />
+      </div>
+    </div>
+    <div class="picture-box">
+          <img src="./pic.avif" alt="">
+    </div>
+  </div>
+
+  <script src="./js.js"></script>
+</body>
+</html>

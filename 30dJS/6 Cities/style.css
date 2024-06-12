@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.app-container {
+  background-color: orange;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.search {
+  margin-top: 3%;
+}
+
+.search-input {
+  border: solid 5px whitesmoke;
+  padding: 5px;
+  font-size: 1.5rem;
+  border-radius: 7px;
+  background-color: white;
+}
+
+.result {
+  list-style: none;
+  background-color: whitesmoke;
+  border: 1px solid grey;
+  padding: 5px;
+  color: rgb(143, 138, 138);
+}
+

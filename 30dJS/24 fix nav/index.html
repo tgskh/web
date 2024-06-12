@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="main">
+    <div class="pic"></div>
+    <div class="nav">
+      <ul class="menu fix-nav">
+        <li><img src="./logo.jpeg" alt="" class="logo"></li>
+        <li><a href=""></a>home</li>
+        <li><a href=""></a>solutions</li>
+        <li><a href=""></a>about</li>
+        <li><a href=""></a>contact</li>
+      </ul>
+    </div>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias a, quod commodi esse dolorem cum, dicta aliquid unde animi nam aspernatur optio ex? Quisquam officiis aut eius praesentium! Assumenda, ab!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias a, quod commodi esse dolorem cum, dicta aliquid unde animi nam aspernatur optio ex? Quisquam officiis aut eius praesentium! Assumenda, ab!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias a, quod commodi esse dolorem cum, dicta aliquid unde animi nam aspernatur optio ex? Quisquam officiis aut eius praesentium! Assumenda, ab!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias a, quod commodi esse dolorem cum, dicta aliquid unde animi nam aspernatur optio ex? Quisquam officiis aut eius praesentium! Assumenda, ab!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias a, quod commodi esse dolorem cum, dicta aliquid unde animi nam aspernatur optio ex? Quisquam officiis aut eius praesentium! Assumenda, ab!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias a, quod commodi esse dolorem cum, dicta aliquid unde animi nam aspernatur optio ex? Quisquam officiis aut eius praesentium! Assumenda, ab!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias a, quod commodi esse dolorem cum, dicta aliquid unde animi nam aspernatur optio ex? Quisquam officiis aut eius praesentium! Assumenda, ab!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias a, quod commodi esse dolorem cum, dicta aliquid unde animi nam aspernatur optio ex? Quisquam officiis aut eius praesentium! Assumenda, ab!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias a, quod commodi esse dolorem cum, dicta aliquid unde animi nam aspernatur optio ex? Quisquam officiis aut eius praesentium! Assumenda, ab!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias a, quod commodi esse dolorem cum, dicta aliquid unde animi nam aspernatur optio ex? Quisquam officiis aut eius praesentium! Assumenda, ab!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias a, quod commodi esse dolorem cum, dicta aliquid unde animi nam aspernatur optio ex? Quisquam officiis aut eius praesentium! Assumenda, ab!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias a, quod commodi esse dolorem cum, dicta aliquid unde animi nam aspernatur optio ex? Quisquam officiis aut eius praesentium! Assumenda, ab!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias a, quod commodi esse dolorem cum, dicta aliquid unde animi nam aspernatur optio ex? Quisquam officiis aut eius praesentium! Assumenda, ab!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias a, quod commodi esse dolorem cum, dicta aliquid unde animi nam aspernatur optio ex? Quisquam officiis aut eius praesentium! Assumenda, ab!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias a, quod commodi esse dolorem cum, dicta aliquid unde animi nam aspernatur optio ex? Quisquam officiis aut eius praesentium! Assumenda, ab!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias a, quod commodi esse dolorem cum, dicta aliquid unde animi nam aspernatur optio ex? Quisquam officiis aut eius praesentium! Assumenda, ab!</p>
+    </div>
+  </div>
+
+  <script>
+    const menu = document.querySelector('.menu');
+    const topOfNav = menu.offsetTop;
+    const content = document.querySelector('.content');
+
+    function fixMenu () {
+
+      if (window.scrollY >= topOfNav) {
+        menu.classList.add('fixed-nav');
+        content.style.marginTop = menu.offsetHeight + 40+ 'px'
+        document.querySelector('.logo').style.width = '40px';
+      } else {
+        menu.classList.remove('fixed-nav')
+        content.style.paddingTop = 20;
+      }
+    }
+
+    window.addEventListener('scroll', fixMenu);
+
+    console.log(menu); console.log('-------------');
+
+  </script>
+</body>
+</html>

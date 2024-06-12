@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  
+  <ul class="bandList">
+
+  </ul>
+
+<script>
+  const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
+
+
+  function showList (arr) {
+    const list = document.querySelector('.bandList');
+    list.innerHTML = arr.map((band) => {
+      return `
+        <li> ${band} </li>
+      `
+    }).join('');
+  }
+
+  function strip(bandName) {
+    return bandName.replace(/^(a |the |an )/i, '').trim();
+  }
+
+  const sorted = bands.sort(function (a,b) {
+    if (strip(a) > strip(b)) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
+
+  showList(sorted);
+
+</script>
+
+</body>
+</html>

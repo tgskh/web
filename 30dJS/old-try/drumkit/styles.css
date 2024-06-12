@@ -1,0 +1,40 @@
+.main {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./3227823.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.piano {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button {
+  font-size: 32px;
+  text-transform: uppercase;
+  background-color: aqua;
+  border: solid 3px black;
+  border-radius: 20%;
+  padding: 40px;
+  margin: 40px;
+  transition: all 0.2s;
+}
+
+.play {
+  transform: scale(1.4);
+  border: solid 5px yellow;
+}
+
+.selected {
+  border: solid 5px gold;
+}
+
+
+

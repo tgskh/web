@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: rgb(23,18,103);
+  background: linear-gradient(90deg, rgb(46, 36, 183) 0%, rgba(235,19,237,1) 50%, rgb(184, 37, 217) 94%);
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.videoPlayer {
+  max-height: 300px;
+  box-shadow: 10px 10px 10px rgb(92, 90, 90);
+}
+

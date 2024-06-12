@@ -1,0 +1,53 @@
+.App {
+  background-color: silver;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-container {
+  min-width: 600px;
+  border-radius: 15px;
+  background-color: #01579b;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  border-radius: 15px 15px 0 0;
+}
+
+.cityName {
+  padding-left: 10px;
+  color: white;
+}
+
+.citySelector {
+  margin-left: 10px;
+}
+
+.refresh {
+  max-height: 30px;
+  margin: 15px;
+}
+
+.head-info {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  font-size: bolder;
+  font-size: 20px;
+}
+
+.mid-info, .bottom-info {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  font-size: 18px;
+}

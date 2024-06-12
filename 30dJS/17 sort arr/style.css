@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.bandList {
+  background-color: whitesmoke;
+  width: 300px;
+}
+
+.bandList li {
+  color: black;
+  font-size: 20px;
+  border-bottom: silver 1px solid;
+  margin: 15px 40px;
+}

@@ -1,0 +1,65 @@
+body {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgb(111, 3, 114) 0%, rgb(121, 9, 80) 6%, rgba(0,212,255,1) 100%);
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 600px;
+  border: solid black 5px;
+  box-shadow: 10px 5px 5px rgb(36, 34, 34);
+  border-radius: 5px;
+  border-bottom: solid black 25px;
+  margin: 20px;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10%;
+  background-color: rgb(236, 202, 13);
+}
+
+.content {
+  display: flex;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10%;
+  background-color: rgb(236, 202, 13);
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a img {
+  max-width: 22px;
+  order: -1;
+  margin-bottom: 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  overflow: scroll;
+  padding: 5px 5px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drum Kit</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./pics/piano.png" type="image/x-icon">
+</head>
+<body>
+  <div class="container">
+    <div class="buttons">
+      <button data-key="65" class="sound-button">
+        <h2>A</h2>
+        <p>click</p>
+      </button>
+    </div>
+    <div class="buttons">
+      <button data-key="83" class="sound-button">
+        <h2>S</h2>
+        <p>click</p>
+      </button>
+    </div>
+    <div class="buttons">
+      <button data-key="68" class="sound-button">
+        <h2>D</h2>
+        <p>click</p>
+      </button>
+    </div>
+    <div class="buttons">
+      <button data-key="70" class="sound-button">
+        <h2>F</h2>
+        <p>click</p>
+      </button>
+    </div>
+    <div class="buttons">
+      <button data-key="71" class="sound-button">
+        <h2>G</h2>
+        <p>click</p>
+      </button>
+    </div>
+    <div class="buttons">
+      <button data-key="72" class="sound-button">
+        <h2>H</h2>
+        <p>click</p>
+      </button>
+    </div>
+    <div class="buttons">
+      <button data-key="74" class="sound-button">
+        <h2>J</h2>
+        <p>click</p>
+      </button>
+    </div>
+    <div class="buttons">
+      <button data-key="75" class="sound-button">
+        <h2>K</h2>
+        <p>click</p>
+      </button>
+    </div>
+    <div class="buttons">
+      <button data-key="76" class="sound-button">
+        <h2>L</h2>
+        <p>click</p>
+      </button>
+    </div>
+  </div>
+
+  <audio data-key="65" src="./sounds/a.wav"></audio>
+  <audio data-key="83" src="./sounds/s.wav"></audio>
+  <audio data-key="68" src="./sounds/d.wav"></audio>
+  <audio data-key="70" src="./sounds/f.wav"></audio>
+  <audio data-key="71" src="./sounds/g.wav"></audio>
+  <audio data-key="72" src="./sounds/h.wav"></audio>
+  <audio data-key="74" src="./sounds/j.wav"></audio>
+  <audio data-key="75" src="./sounds/k.wav"></audio>
+  <audio data-key="76" src="./sounds/l.wav"></audio>
+  
+  <script src="./js.js"></script>
+</body>
+</html>

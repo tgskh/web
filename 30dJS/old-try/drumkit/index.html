@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Drum kit</title>
+</head>
+<body>
+  <div class="main">
+    <div class="piano" id="piano">
+      <div data-key="65" class="button">a</div>
+      <div data-key="83" class="button">s</div>
+      <div data-key="68" class="button">d</div>
+      <div data-key="70" class="button">f</div>
+      <div data-key="71" class="button">g</div>
+      <div data-key="72" class="button">h</div>
+      <div data-key="74" class="button">j</div>
+      <div data-key="75" class="button">k</div>
+    </div>
+    
+    <audio data-key="65" src="./sounds/a.wav"></audio>
+    <audio data-key="83" src="./sounds/b.wav"></audio>
+    <audio data-key="68" src="./sounds/c.wav"></audio>
+    <audio data-key="72" src="./sounds/c.wav"></audio>
+    <audio data-key="74" src="./sounds/c.wav"></audio>
+    <audio data-key="70" src="./sounds/d.wav"></audio>
+    <audio data-key="71" src="./sounds/e.wav"></audio>
+    <audio data-key="75" src="./sounds/e.wav"></audio>
+    
+  </div>
+
+
+</body>
+<script src="./js.js"></script>
+</html>
