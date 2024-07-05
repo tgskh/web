@@ -83,6 +83,10 @@
   background: rgb(99, 98, 98, 0.4);
 }
 
+.duplicate {
+  background: rgba(225, 170, 7, 0.4);
+}
+
 .artist {
   font-size: 0.5rem;
 }

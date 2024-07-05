@@ -10,6 +10,7 @@ function App() {
 
   async function searchAndDisplay(songTitle) {
     const results = await getSongs(songTitle);
+    const playlist = await getPlaylistSongs();
     setSongs(results);
   }
 
@@ -45,7 +46,7 @@ function App() {
     <div className="App">
       <div className='container'>
         <Header />
-        <SearchBar onSearch={searchAndDisplay} />
+        <SearchBar onSearch={searchAndDisplay} preview={searchAndDisplay}/>
 
         <div className="main">
           <div className="songContainer">
@@ -70,7 +71,7 @@ function App() {
                 <li key={song.track.id} className='song'>
                 <div>
                   <h3>{song.track.name}</h3>
-                  <p className='artist'>{song.track.artist}</p>
+                  <p className='artist'>{song.track.artists[0].name}</p>
                 </div>
                 <div>
                   <button className='addPlaylist' onClick={() => removeSong(song)}>Rem</button>
