@@ -27,13 +27,14 @@ function App() {
     const data = {
       track: {
         name: song.name,
-        artist: song.artists[0].name,
+        artists: [{name: song.artists[0].name}],
         id: song.id
       }
     }
-     if (playlist.findIndex(el => el.track.id == song.id) > 0) {
+     if (playlist.findIndex(el => el.track.id == song.id) >= 0) {
       alert('Already added');
      } else {
+      console.log(data);
       setPlaylist(prevPlaylist => [...prevPlaylist, data]);  
      }
   }
@@ -47,7 +48,6 @@ function App() {
       <div className='container'>
         <Header />
         <SearchBar onSearch={searchAndDisplay} preview={searchAndDisplay}/>
-
         <div className="main">
           <div className="songContainer">
             <h2>Results</h2>
